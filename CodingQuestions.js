@@ -87,6 +87,14 @@ const sumleParam = (...num) => {
 console.log(sumleParam(1, 2, 3, 4, 5));
 //////////////////////////////////
 //12
+function delayedSuccess() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Success");
+    }, 3000);
+  });
+}
+delayedSuccess().then((res) => console.log(res));
 //////////////////////////////////
 //13
 let arr5 = [1, 3, 7, 2, 4];
