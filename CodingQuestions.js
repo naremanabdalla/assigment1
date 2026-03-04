@@ -53,8 +53,7 @@ switch (day) {
 //////////////////////////////////
 // 7
 let arr4 = ["a", "ab", "abc"];
-let arr4_length = 0;
-arr4.map((ele) => arr4_length++);
+let arr4_length = arr4.map((ele) => ele.length);
 console.log(arr4_length);
 //////////////////////////////////
 // 8
@@ -81,7 +80,7 @@ console.log(destructObj(person));
 //11
 const sumleParam = (...num) => {
   let sum = 0;
-  num.map((ele) => (sum += ele));
+  num.forEach((ele) => (sum += ele));
   return sum;
 };
 console.log(sumleParam(1, 2, 3, 4, 5));
@@ -99,7 +98,7 @@ delayedSuccess().then((res) => console.log(res));
 //13
 let arr5 = [1, 3, 7, 2, 4];
 const largestNum = (arr) => {
-  let largest = arr5[0];
+  let largest = arr[0];
   arr.map((ele) => (ele > largest ? (largest = ele) : (largest = largest)));
   return largest;
 };
